@@ -4,8 +4,8 @@ import Twitter from "next-auth/providers/twitter"
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     Twitter({
-      token: { request: () => {} },
-      userinfo: { request: () => {} }
+      token: { request: () => { console.log('token') } },
+      userinfo: { request: () => { console.log('userinfo') } }
     })
   ],
 })
